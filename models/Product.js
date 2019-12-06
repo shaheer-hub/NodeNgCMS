@@ -6,7 +6,8 @@ var ProductSchema = new mongoose.Schema({
   prod_description: String,
   //   prod_category: {ref:Category},
   prod_category: [{ type: Schema.Types.ObjectId , ref: "Category" }],
-  prod_type: [{ type: Schema.Types.ObjectId , ref: "ProductType" }]
+  prod_type: [{ type: Schema.Types.ObjectId , ref: "ProductType" }],
+  prod_photo: String
   //   prod_producttype:{ref:},
 });
 mongoose.model("Product", ProductSchema);
